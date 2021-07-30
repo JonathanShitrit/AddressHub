@@ -1,6 +1,6 @@
 from pages.base_page import BasePage
 from utils.locators import AcrisLocators
-from utils.addresses import *
+from utils.env_loader import *
 import time
 
 class AcrisPage(BasePage):

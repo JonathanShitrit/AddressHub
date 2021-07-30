@@ -1,7 +1,7 @@
 from pages.base_page import BasePage
 from utils.locators import NYCGovLocators
 from selenium.webdriver.support.ui import Select
-from utils.addresses import *
+from utils.env_loader import *
 import time
 
 class NYCGovPage(BasePage):

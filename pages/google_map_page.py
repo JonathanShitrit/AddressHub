@@ -1,7 +1,7 @@
 from pages.base_page import BasePage
 from utils.locators import GoogleMapLocators
 from selenium.webdriver.support.ui import Select
-from utils.addresses import *
+from utils.env_loader import *
 import time
 
 class GoogleMapPage(BasePage):

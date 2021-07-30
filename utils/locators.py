@@ -3,21 +3,6 @@ from selenium.webdriver.common.by import By
 
 # for maintainability we can seperate web objects by page name
 
-class MainPageLocators(object):
-    LOGO = (By.ID, 'nav-logo')
-    ACCOUNT = (By.ID, 'nav-link-accountList')
-    SIGNUP = (By.CSS_SELECTOR, '#nav-signin-tooltip > div > a')
-    LOGIN = (By.CSS_SELECTOR, '#nav-signin-tooltip > a')
-    SEARCH = (By.ID, 'twotabsearchtextbox')
-    SEARCH_LIST = (By.CSS_SELECTOR, 'div[data-component-type="s-search-result"]')
-
-
-class LoginPageLocators(object):
-    EMAIL = (By.ID, 'ap_email')
-    PASSWORD = (By.ID, 'ap_password')
-    SUBMIT = (By.ID, 'signInSubmit-input')
-    ERROR_MESSAGE = (By.ID, 'message_error')
-
 class AcrisLocators(object):
     COUNTY = (By.NAME, 'select_borough')
     STREET_NUMBER = (By.NAME, 'text_street_number')
@@ -43,5 +28,18 @@ class GoogleMapLocators(object):
     SEARCH_BOX_INPUT = (By.ID, 'searchboxinput')
     SEARCH_BTN = (By.ID, 'searchbox-searchbutton')
 
+class GeoDataLocators(object):
+    # "loginRegisterErrorMobile"
+    # /html/body/div[1]/div[2]/header[1]/div/div/div/nav/div/div[2]/div[1]/ul/li/ul/li[1]/div/div/a
+    # "loginRegisterErrorMobile"
+    # /html/body/div[1]/div[2]/header[2]/div/div[2]/div/nav/div/div[3]/div[1]/ul[2]/li/ul/li[1]/div/div/a
+    # "loginRegisterError"
+    # /html/body/div[1]/div[2]/header[2]/div/div[2]/div/nav/div/div[3]/div[2]/ul/li[10]/div/a
+
+    LOGIN_MODAL = (By.XPATH, '/html/body/div[1]/div[2]/header[2]/div/div[2]/div/nav/div/div[3]/div[2]/ul/li[10]/div/a')
+    LOGIN_EMAIL_INPUT = (By.ID, 'LoginModal_Email')
+    LOGIN_PASSWORD_INPUT = (By.ID, 'LoginModal_Password')
+    LOGIN_SUBMIT_BTN = (By.ID, 'LoginModal_Submit')
+
 class BodyLocators(object):
-    BODY = (By.NAME, 'body')
+    BODY = (By.NAME, 'body')  

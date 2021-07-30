@@ -32,6 +32,9 @@ class BasePage(object):
         self.driver.get(self.base_url)
         tab_index += 1
 
+    def execute_script(self, script):
+        self.driver.execute_script(script)        
+
     def get_title(self):
         return self.driver.title
 
@@ -48,7 +51,8 @@ class BasePage(object):
             WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable(locator))
         except TimeoutException:
             print("\n * ELEMENT NOT FOUND WITHIN GIVEN TIME! --> %s" %(locator[1]))
-            self.driver.quit()
+            return False
+            # self.driver.quit()
 
   
     # def get_element(self, *locator, wait=10):
