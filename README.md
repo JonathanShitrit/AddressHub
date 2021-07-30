@@ -1,46 +1,14 @@
-[page-object-python-selenium] is being sponsored by the following tool; please help to support us by taking a look and signing up to a free trial
+# AddressHub
 
+Address hub is a web automation tool which inserts property addresses into 5 different websites for you. This way you can get to the property details quicker. This project utilizes the Page-object-model (POM) pattern. This Design Pattern is used in Selenium where web pages are represented by a corresponding class and web elements are represented by the variables of the class and all interactions are possible through the methods or say functions of the class.
 
-# Selenium Page Object Model with Python 
+## Advantages of POM model:
 
-Page-object-model (POM) is a pattern that you can apply it to develop efficient automation framework. With page-model, it is possible to minimise maintenance cost. Basically page-object means that your every page is inherited from a base class which includes basic functionalities for every pages. If you have some new functionality that every pages have, you can simple add it to the base class.
+* Reusability: We can inherit from the base_page class in different test cases which means the code for identifying web elements and methods to interact with them can easily be reused.
+* Code separation – Keep test and locators separately, makes our code clean, easy to understand, and maintain
+* Maintainability: Test case and page class are different from each other which means we can easily update the code if the user interface changes. The fix needs changes in only one place.
+* Readability: New team members can easily start writing tests by following the existing structure.
 
-`BasePage` class include basic functionality and driver initialization
-```python
-base_page.py
-class BasePage(object):
-    def __init__(self, driver, base_url='http://www.amazon.com/'):
-        self.base_url = base_url
-        self.driver = driver
-        self.timeout = 30
-
-    def find_element(self, *locator):
-        return self.driver.find_element(*locator)
-```
-
-`MainPage` is derived from the `BasePage class, it contains methods related to this page, which will be used to create test steps.
-```python
-# main_page.py
-class MainPage(BasePage):
-    def __init__(self, driver):
-        self.locator = MainPageLocators
-        super().__init__(driver)  # Python3 version
-
-    def check_page_loaded(self):
-        return True if self.find_element(*self.locator.LOGO) else False
-```
-
-When you want to write tests, you should derive your test class from `BaseTest` which holds basic functionality for your tests. Then you can call  page and related methods in accordance with the steps in the test cases
-```python
-class TestSignInPage(BaseTest):
-
-    def test_sign_in_with_valid_user(self):
-        print("\n" + str(test_cases(4)))
-        main_page = MainPage(self.driver)
-        login_page = main_page.click_sign_in_button()
-        result = login_page.login_with_valid_user("valid_user")
-        self.assertIn("yourstore/home", result.get_url())
-```
 
 #### If you want to run all tests, you should type: 
 ```sh
@@ -50,10 +18,10 @@ python -m unittest
 
 #### If you want to run just a class, you should type: 
 ```sh
-python -m unittest tests.test_sign_in_page.TestSignInPage
+python -m unittest tests.test_nyc_gov_page
 ```
 
 #### If you want to run just a test method, you should type: 
 ```sh
-python -m unittest tests.test_sign_in_page.TestSignInPage.test_page_load
+python -m unittest tests.test_nyc_gov_page.test_nyc_gov_page
 ```
