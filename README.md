@@ -12,7 +12,7 @@ Address hub is a web automation tool which inserts property addresses into 5 dif
 
 #### If you want to run all tests, you should type: 
 ```sh
-python -m unittest 
+ python -m unittest tests.test_all_pages 
 ```
 
 
