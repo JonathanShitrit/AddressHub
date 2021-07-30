@@ -9,6 +9,8 @@ Address hub is a web automation tool which inserts property addresses into 5 dif
 * Maintainability: Test case and page class are different from each other which means we can easily update the code if the user interface changes. The fix needs changes in only one place.
 * Readability: New team members can easily start writing tests by following the existing structure.
 
+#### If you want to run all tests, you should type: 
+* Update the env file with the property address you want to automate. Save it and run the command below.
 
 #### If you want to run all tests, you should type: 
 ```sh
