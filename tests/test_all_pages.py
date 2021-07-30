@@ -4,6 +4,7 @@ from pages.acris_page import AcrisPage
 from pages.true_people_search import TruePeopleSearchPage
 from pages.nyc_gov_page import NYCGovPage
 from pages.google_map_page import GoogleMapPage
+from pages.geodata_page import GeoDataPage
 
 
 # I am using python unittest for asserting cases.
@@ -31,5 +32,10 @@ class TestAllPages(BaseTest):
         print("Starting with Google Maps.")
         google_map_page = GoogleMapPage(self.driver)
         google_map_page.run_full_test()
-        print("Finished with Google Maps.")
+        print("Finished with Google Maps.\n")
+
+        print("Starting with GeoData.")
+        geodata_page = GeoDataPage(self.driver)
+        geodata_page.run_full_test()
+        print("Finished with GeoData.")
 

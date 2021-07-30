@@ -43,3 +43,4 @@ class GoogleMapPage(BasePage):
         self.insert_property_address()
         print("Clicking go button...")
         self.click_search_btn()
+        time.sleep(2)

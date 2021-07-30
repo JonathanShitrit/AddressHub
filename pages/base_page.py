@@ -30,10 +30,7 @@ class BasePage(object):
         self.driver.execute_script("window.open('');")
         self.driver.switch_to.window(self.driver.window_handles[tab_index])
         self.driver.get(self.base_url)
-        tab_index += 1
-
-    def execute_script(self, script):
-        self.driver.execute_script(script)        
+        tab_index += 1     
 
     def get_title(self):
         return self.driver.title

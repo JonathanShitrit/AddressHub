@@ -48,26 +48,19 @@ class GeoDataPage(BasePage):
     def click_go_btn(self):
         self.find_element(*self.locator.GO_BTN).click()
 
-        # <div id="LoginModal" class="modal fade ModalsVik inputModal LoginModal main-login in" role="dialog" style="display: block; padding-right: 16px;">
 
     def login(self):
-        # try:
-        #     self.open_login_modal()
-        # except(err):
-        #     print(err)
         self.open_login_modal()
         self.enter_email()
         self.enter_password()
         self.click_login_btn()
 
-    def insert_property_address(self):
-        self.enter_street_number()
-        self.enter_street_name()
-        self.enter_street_suffix()
-        self.select_from_dropdown()
+    # def insert_property_address(self):
+    #     self.enter_street_number()
+    #     self.enter_street_name()
+    #     self.enter_street_suffix()
+    #     self.select_from_dropdown()
 
     def run_full_test(self):
-        print("Inserting property address...")
-        self.insert_property_address()
-        print("Clicking go button...")
-        self.click_go_btn()
+        print("Logging into geodata...")
+        self.login()
