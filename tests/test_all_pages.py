@@ -5,7 +5,7 @@ from pages.true_people_search import TruePeopleSearchPage
 from pages.nyc_gov_page import NYCGovPage
 from pages.google_map_page import GoogleMapPage
 from pages.geodata_page import GeoDataPage
-
+import time
 
 # I am using python unittest for asserting cases.
 # In this module, there should be test cases.
@@ -37,5 +37,5 @@ class TestAllPages(BaseTest):
         print("Starting with GeoData.")
         geodata_page = GeoDataPage(self.driver)
         geodata_page.run_full_test()
-        print("Finished with GeoData.")
+        print("Finished with GeoData.\n")
 
