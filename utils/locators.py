@@ -35,11 +35,18 @@ class GeoDataLocators(object):
     # /html/body/div[1]/div[2]/header[2]/div/div[2]/div/nav/div/div[3]/div[1]/ul[2]/li/ul/li[1]/div/div/a
     # "loginRegisterError"
     # /html/body/div[1]/div[2]/header[2]/div/div[2]/div/nav/div/div[3]/div[2]/ul/li[10]/div/a
-
-    LOGIN_MODAL = (By.XPATH, '/html/body/div[1]/div[2]/header[2]/div/div[2]/div/nav/div/div[3]/div[2]/ul/li[10]/div/a')
+    LOGIN_MODAL_1 = (By.XPATH, '/html/body/div[1]/div[2]/header[2]/div/div[2]/div/nav/div/div[3]/div[2]/ul/li[10]/div/a')
+    LOGIN_MODAL_2 = (By.XPATH, '/html/body/div[1]/div[2]/header[1]/div/div/div/nav/div/div[2]/div[1]/ul/li/ul/li[1]/div/div/a')
+    LOGIN_MODAL_3 = (By.XPATH, '/html/body/div[1]/div[2]/header[2]/div/div[2]/div/nav/div/div[3]/div[1]/ul[2]/li/ul/li[1]/div/div/a')
     LOGIN_EMAIL_INPUT = (By.ID, 'LoginModal_Email')
     LOGIN_PASSWORD_INPUT = (By.ID, 'LoginModal_Password')
     LOGIN_SUBMIT_BTN = (By.ID, 'LoginModal_Submit')
+    OVERRIDE_LOGIN_BTN = (By.ID, 'btnLogin')
+    ALL_COUNTIES_BTN = (By.ID, 'lnkallcounties')
+    HOUSE_NUMBER_INPUT = (By.ID, 'txt_UnificationHNo')
+    STREET_NAME_INPUT = (By.ID, 'txt_UnificationStreet')
+    SEARCH_BTN = (By.ID, 'btnUnificationAddSearch')
+
 
 class BodyLocators(object):
     BODY = (By.NAME, 'body')  

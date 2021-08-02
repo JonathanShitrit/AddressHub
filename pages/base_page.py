@@ -14,9 +14,10 @@ class BasePage(object):
         self.timeout = 30
 
     def find_element(self, *locator):
-        self.wait_element(*locator)
-        return self.driver.find_element(*locator)
-    
+        if self.wait_element(*locator):
+            return self.driver.find_element(*locator)
+        return None
+        
     def new_tab(self):
         global tab_index
 
@@ -45,7 +46,8 @@ class BasePage(object):
 
     def wait_element(self, *locator):
         try:
-            WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable(locator))
+            WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable(locator))
+            return True
         except TimeoutException:
             print("\n * ELEMENT NOT FOUND WITHIN GIVEN TIME! --> %s" %(locator[1]))
             return False

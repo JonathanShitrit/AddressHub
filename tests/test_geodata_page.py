@@ -12,6 +12,6 @@ class TestGeoDataPage(BaseTest):
     def test_geodata_page(self):
         print("Starting with GeoData.")
         page = GeoDataPage(self.driver)
-        page.login()
+        page.run_full_test()
         print("Finished with GeoData.")
 
