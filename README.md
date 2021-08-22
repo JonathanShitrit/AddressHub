@@ -33,10 +33,10 @@ PASSWORD=INSERT_PASSWORD_FOR_GEODATADIRECT
 
 #### If you want to run all tests, you should type: 
 ```sh
- python -m unittest tests.test_all_pages 
+ python3 -m unittest tests.test_all_pages 
 ```
 
 #### If you want to run one specific website, you should type: 
 ```sh
-python -m unittest tests.test_nyc_gov_page
+python3 -m unittest tests.test_nyc_gov_page
 ```

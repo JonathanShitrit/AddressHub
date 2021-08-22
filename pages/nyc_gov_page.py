@@ -7,7 +7,7 @@ import time
 class NYCGovPage(BasePage):
     def __init__(self, driver):
         self.locator = NYCGovLocators
-        super(NYCGovPage, self).__init__(driver, "https://www1.nyc.gov/site/buildings/index.page")  # Python2 version
+        super(NYCGovPage, self).__init__(driver, "http://a810-bisweb.nyc.gov/bisweb/bispi00.jsp?show=1")  # Python2 version
         self.new_tab()
 
     def check_page_loaded(self):
