@@ -40,3 +40,8 @@ PASSWORD=INSERT_PASSWORD_FOR_GEODATADIRECT
 ```sh
 python3 -m unittest tests.test_nyc_gov_page
 ```
+
+#### To update your code, enter this command in terminal:
+```sh
+git pull
+```
