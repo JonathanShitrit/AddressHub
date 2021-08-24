@@ -14,7 +14,6 @@ class NYCGovPage(BasePage):
         return True if self.find_element(*self.locator.HOUSE_NUMBER_INPUT) else False
 
     def enter_street_number(self):
-        self.hover(*self.locator.HOUSE_NUMBER_INPUT)
         self.find_element(*self.locator.HOUSE_NUMBER_INPUT).send_keys(STREET_NUMBER)
     
     def enter_street_name(self):
