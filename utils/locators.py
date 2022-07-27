@@ -37,9 +37,9 @@ class GeoDataLocators(object):
     LOGIN_SUBMIT_BTN = (By.ID, 'LoginModal_Submit')
     OVERRIDE_LOGIN_BTN = (By.ID, 'btnLogin')
     ALL_COUNTIES_BTN = (By.ID, 'lnkallcounties')
-    HOUSE_NUMBER_INPUT = (By.ID, 'txt_UnificationHNo')
-    STREET_NAME_INPUT = (By.ID, 'txt_UnificationStreet')
-    SEARCH_BTN = (By.ID, 'btnUnificationAddSearch')
+    HOUSE_NUMBER_INPUT = (By.ID, 'txt_HNo')
+    STREET_NAME_INPUT = (By.ID, 'txt_St')
+    SEARCH_BTN = (By.CLASS_NAME, 'search_btn')
 
 
 class BodyLocators(object):

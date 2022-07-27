@@ -59,7 +59,13 @@ class GeoDataPage(BasePage):
             elem.click()
             print("Forcing login...")
             return
-        
+        email_elem = self.find_element(*self.locator.LOGIN_EMAIL_INPUT)
+        if email_elem:
+            print("Login is still processing. Try login again")
+            self.enter_email()
+            self.enter_password()
+            self.click_login_btn()
+            self.click_override_login_btn()
         print("Did not have to force login.")
 
     def click_all_counties_btn(self):
