@@ -29,8 +29,3 @@ class BaseTest(unittest.TestCase):
     # def tearDown(self):
     #     print(999)
     #     self.driver.close()
-
-
-if __name__ == "__main__":
-    suite = unittest.TestLoader().loadTestsFromTestCase(TestPages)
-    unittest.TextTestRunner(verbosity=1).run(suite)

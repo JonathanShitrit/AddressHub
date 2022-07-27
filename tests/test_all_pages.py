@@ -1,15 +1,9 @@
-import unittest
 from tests.base_test import BaseTest
 from pages.acris_page import AcrisPage
 from pages.true_people_search import TruePeopleSearchPage
 from pages.nyc_gov_page import NYCGovPage
 from pages.google_map_page import GoogleMapPage
 from pages.geodata_page import GeoDataPage
-import time
-
-# I am using python unittest for asserting cases.
-# In this module, there should be test cases.
-# If you want to run it, you should type: python <module-name.py>
 
 class TestAllPages(BaseTest):
 
