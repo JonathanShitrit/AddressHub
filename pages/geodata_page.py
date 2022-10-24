@@ -14,31 +14,13 @@ class GeoDataPage(BasePage):
         return True if self.find_element(*self.locator.LOGIN_MODAL) else False
 
     def open_login_modal(self):
-        # login_modals = [*self.locator.LOGIN_MODAL_1, *self.locator.LOGIN_MODAL_2, *self.locator.LOGIN_MODAL_3]
+        login_modals = [self.locator.LOGIN_MODAL_1, self.locator.LOGIN_MODAL_2, self.locator.LOGIN_MODAL_3]
 
-        # for modal in login_modals:
-        #     print(modal)
-        #     elem = self.find_element(modal)
-        #     if elem:
-        #         elem.click()
-
-        # Based on the screen resolution 1 of 3 modals will be the correct one. 
-        # Try each one, if it is correct the click and return
-        login_modal_1 = self.find_element(*self.locator.LOGIN_MODAL_1)
-        if login_modal_1:   
-            login_modal_1.click()
-            return
-
-        login_modal_2 = self.find_element(*self.locator.LOGIN_MODAL_2)
-        if login_modal_2:
-            login_modal_2.click()
-            return
-
-        login_modal_3 = self.find_element(*self.locator.LOGIN_MODAL_3)
-        if login_modal_3:
-            login_modal_3.click()
-            return
- 
+        for modal in login_modals:
+            elem = self.find_element(*modal)
+            if elem:
+                elem.click()
+                return 
         
     def open_login_mobile_modal(self):
         self.find_element(*self.locator.LOGIN_MODAL_MOBILE).click()
