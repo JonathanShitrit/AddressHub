@@ -4,13 +4,10 @@ from pages.true_people_search import TruePeopleSearchPage
 from pages.nyc_gov_page import NYCGovPage
 from pages.google_map_page import GoogleMapPage
 from pages.geodata_page import GeoDataPage
-from utils.addToCSV import add_property_to_csv
+
 class TestAllPages(BaseTest):
 
     def test_all_pages(self):
-        print("Adding property to addresses.csv\n")
-        add_property_to_csv()
-
         print("Starting with Acris.")
         acris_page = AcrisPage(self.driver)
         acris_page.run_full_test()

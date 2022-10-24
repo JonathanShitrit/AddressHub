@@ -2,6 +2,8 @@ import unittest
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
+from utils.google_sheet import GoogleSheet
+from utils.env_loader import *
 
 # I am using python unittest for asserting cases.
 # In this module, there should be test cases.
@@ -18,13 +20,17 @@ class BaseTest(unittest.TestCase):
         # options.add_argument("--enable-automation")
         # options.add_argument("--start-fullscreen")
         # options.add_experimental_option("excludeSwitches", ['enable-automation'])
+        sheet = GoogleSheet()
+        property = [STREET_NUMBER, STREET_NAME, SUFFIX, CITY, COUNTY, STATE]
+        sheet.add_address_to_sheet(property)
+
+        print("Starting up!")
 
         global d
         d = webdriver.Chrome(ChromeDriverManager(cache_valid_range=1).install(), options=options)
         # d = webdriver.Chrome(options=options)
         self.driver = d
         
-        print("Starting up!")
 
     # def tearDown(self):
     #     print(999)

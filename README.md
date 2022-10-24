@@ -17,6 +17,7 @@ Address hub is a web automation tool which inserts property addresses into 5 dif
 pip install selenium
 pip install python-dotenv
 pip install webdriver-manager
+pip install gspread oauth2client
 ```
 4. Save an .env file to the project with the property address you want to automate. ex:
 ```sh
