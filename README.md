@@ -31,6 +31,8 @@ PASSWORD=INSERT_PASSWORD_FOR_GEODATADIRECT
 ```
 5. You can now run the tests below
 
+6. Open the file ```addresses.csv``` in the ```output``` folder to see an excel sheet of all the addresses you've searched
+
 #### If you want to run all tests, you should type: 
 ```sh
 python3 -m unittest tests.test_all_pages 
