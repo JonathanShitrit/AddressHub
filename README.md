@@ -15,6 +15,7 @@ Address hub is a web automation tool which inserts property addresses into 5 dif
 3. Navigate into the folder and run these 3 commands
 ```sh
 pip install selenium
+pip install packaging
 pip install python-dotenv
 pip install webdriver-manager
 pip install gspread oauth2client
