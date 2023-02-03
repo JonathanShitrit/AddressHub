@@ -20,11 +20,11 @@ pip install python-dotenv
 pip install webdriver-manager
 pip install gspread oauth2client
 ```
-4. Save an .env file to the project with the property address you want to automate. ex:
+4. Save a .env file to the project with the property address you want to automate. If the property is not an apartment, leave `UNIT` blank example:
 ```sh
 STREET_NUMBER=123
 STREET_NAME=main Street
-UNIT=3f
+UNIT=
 COUNTY=queens
 CITY=flushing
 STATE=ny
