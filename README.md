@@ -23,8 +23,8 @@ pip install gspread oauth2client
 4. Save an .env file to the project with the property address you want to automate. ex:
 ```sh
 STREET_NUMBER=123
-STREET_NAME=main
-SUFFIX=st
+STREET_NAME=main Street
+UNIT=3f
 COUNTY=queens
 CITY=flushing
 STATE=ny
