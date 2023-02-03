@@ -22,9 +22,9 @@ class BaseTest(unittest.TestCase):
         # options.add_argument("--enable-automation")
         # options.add_argument("--start-fullscreen")
         # options.add_experimental_option("excludeSwitches", ['enable-automation'])
-        # sheet = GoogleSheet()
-        # property = [STREET_NUMBER, STREET_NAME, UNIT, CITY, COUNTY, STATE]
-        # sheet.add_address_to_sheet(property)
+        sheet = GoogleSheet()
+        property = [STREET_NUMBER, STREET_NAME, UNIT, CITY, COUNTY, STATE]
+        sheet.add_address_to_sheet(property)
 
         print("Starting up!")
 
