@@ -19,9 +19,6 @@ class NYCGovPage(BasePage):
     def enter_street_name(self):
         self.find_element(*self.locator.STREET_NAME_INPUT).send_keys(STREET_NAME + " ")
 
-    def enter_street_suffix(self):
-        self.find_element(*self.locator.STREET_NAME_INPUT).send_keys(SUFFIX)
-
     def select_from_dropdown(self):
         Select(self.find_element(*self.locator.BORO_DROPDOWN)).select_by_value(get_boro_id())
 
@@ -31,7 +28,6 @@ class NYCGovPage(BasePage):
     def insert_property_address(self):
         self.enter_street_number()
         self.enter_street_name()
-        self.enter_street_suffix()
         self.select_from_dropdown()
 
     def run_full_test(self):

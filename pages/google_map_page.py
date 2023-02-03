@@ -19,9 +19,6 @@ class GoogleMapPage(BasePage):
     def enter_street_name(self):
         self.find_element(*self.locator.SEARCH_BOX_INPUT).send_keys(STREET_NAME + " ")
 
-    def enter_street_suffix(self):
-        self.find_element(*self.locator.SEARCH_BOX_INPUT).send_keys(SUFFIX + " ")  
-
     def enter_city(self):
         self.find_element(*self.locator.SEARCH_BOX_INPUT).send_keys(CITY + ", ")
 
@@ -34,7 +31,6 @@ class GoogleMapPage(BasePage):
     def insert_property_address(self):
         self.enter_street_number()
         self.enter_street_name()
-        self.enter_street_suffix()
         self.enter_city()
         self.enter_state()
 

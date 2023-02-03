@@ -1,6 +1,7 @@
 import unittest
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from utils.google_sheet import GoogleSheet
 from utils.env_loader import *
@@ -17,17 +18,18 @@ class BaseTest(unittest.TestCase):
         options.add_argument('--no-sandbox')  # # Bypass OS security model
         options.add_argument("--disable-extensions")
         options.add_argument("--window-size=1080,1080")
+        options.add_experimental_option("detach", True)
         # options.add_argument("--enable-automation")
         # options.add_argument("--start-fullscreen")
         # options.add_experimental_option("excludeSwitches", ['enable-automation'])
-        sheet = GoogleSheet()
-        property = [STREET_NUMBER, STREET_NAME, SUFFIX, CITY, COUNTY, STATE]
-        sheet.add_address_to_sheet(property)
+        # sheet = GoogleSheet()
+        # property = [STREET_NUMBER, STREET_NAME, UNIT, CITY, COUNTY, STATE]
+        # sheet.add_address_to_sheet(property)
 
         print("Starting up!")
 
         global d
-        d = webdriver.Chrome(ChromeDriverManager(cache_valid_range=1).install(), options=options)
+        d = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
         # d = webdriver.Chrome(options=options)
         self.driver = d
         

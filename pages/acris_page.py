@@ -21,8 +21,8 @@ class AcrisPage(BasePage):
     def enter_street_name(self):
         self.find_element(*self.locator.STREET_NAME).send_keys(STREET_NAME + " ")
 
-    def enter_street_suffix(self):
-        self.find_element(*self.locator.STREET_NAME).send_keys(SUFFIX)
+    def enter_unit_number(self):
+        self.find_element(*self.locator.UNIT).send_keys(UNIT)
 
     def click_find_bbl(self):
         self.find_element(*self.locator.FIND_BBL).click()
@@ -40,7 +40,7 @@ class AcrisPage(BasePage):
         self.enter_county()
         self.enter_street_number()
         self.enter_street_name()
-        self.enter_street_suffix()
+        self.enter_unit_number()
 
     def run_full_test(self):
         print("Inserting property address...")

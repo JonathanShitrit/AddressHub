@@ -14,7 +14,7 @@ class GeoDataPage(BasePage):
         return True if self.find_element(*self.locator.LOGIN_MODAL) else False
 
     def open_login_modal(self):
-        login_modals = [self.locator.LOGIN_MODAL_1, self.locator.LOGIN_MODAL_2, self.locator.LOGIN_MODAL_3]
+        login_modals = [self.locator.LOGIN_MODAL_1, self.locator.LOGIN_MODAL_2, self.locator.LOGIN_MODAL_3, self.locator.SIGN_IN_BTN, self.locator.MOBILE_SIGN_IN_BTN]
 
         for modal in login_modals:
             elem = self.find_element(*modal)

@@ -5,7 +5,7 @@ load_dotenv()
 
 STREET_NUMBER = os.getenv("STREET_NUMBER")
 STREET_NAME = os.getenv("STREET_NAME")
-SUFFIX = os.getenv("SUFFIX")
+UNIT = os.getenv("UNIT")
 COUNTY = os.getenv("COUNTY")
 CITY = os.getenv("CITY")
 STATE = os.getenv("STATE")
