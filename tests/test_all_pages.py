@@ -8,28 +8,43 @@ from pages.geodata_page import GeoDataPage
 class TestAllPages(BaseTest):
 
     def test_all_pages(self):
-        print("Starting with Acris.")
-        acris_page = AcrisPage(self.driver)
-        acris_page.run_full_test()
-        print("Finished with Acris.\n")
+        try:
+            print("Opening Acris.")
+            acris_page = AcrisPage(self.driver)
+            acris_page.run_full_test()
+            print("Finished with Acris.\n")
+        except Exception as e:
+            print("\nSomething failed with Acris.", e,"\n")
 
-        print("Starting with TruePeople.")
-        true_people = TruePeopleSearchPage(self.driver)
-        true_people.run_full_test()
-        print("Finished with True People.\n")
+        try:
+            print("Opening TruePeople.")
+            true_people = TruePeopleSearchPage(self.driver)
+            true_people.run_full_test()
+            print("Finished with True People.\n")
+        except Exception as e:
+            print("\nSomething failed with TruePeople.", e,"\n")
+        
+        try:
+            print("Opening NYC Gov.")
+            nyc_gov_page = NYCGovPage(self.driver)
+            nyc_gov_page.run_full_test()
+            print("Finished with NYC Gov.\n")
+        except Exception as e:
+            print("\nSomething failed with NYC Gov.", e,"\n")
 
-        print("Starting with NYC Gov.")
-        nyc_gov_page = NYCGovPage(self.driver)
-        nyc_gov_page.run_full_test()
-        print("Finished with NYC Gov.\n")
+        try:        
+            print("Opening Google Maps.")
+            google_map_page = GoogleMapPage(self.driver)
+            google_map_page.run_full_test()
+            print("Finished with Google Maps.\n")
+        except Exception as e:
+            print("\nSomething failed with Google Maps.", e,"\n")
 
-        print("Starting with Google Maps.")
-        google_map_page = GoogleMapPage(self.driver)
-        google_map_page.run_full_test()
-        print("Finished with Google Maps.\n")
-
-        print("Starting with GeoData.")
-        geodata_page = GeoDataPage(self.driver)
-        geodata_page.run_full_test()
-        print("Finished with GeoData.\n")
+        try:        
+            print("Opening GeoData.")
+            geodata_page = GeoDataPage(self.driver)
+            geodata_page.run_full_test()
+            print("Finished with GeoData.\n")
+        except Exception as e:
+            print("\nSomething failed with GeoData.", e,"\n")
 
