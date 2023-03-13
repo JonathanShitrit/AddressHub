@@ -7,23 +7,11 @@ import time
 class GeoDataPage(BasePage):
     def __init__(self, driver):
         self.locator = GeoDataLocators
-        super(GeoDataPage, self).__init__(driver, "https://www.geodataplus.com/")  # Python2 version
+        super(GeoDataPage, self).__init__(driver, "https://www.attomdata.com/solutions/property-navigator/signin")  # Python2 version
         self.new_tab()
 
     def check_page_loaded(self):
         return True if self.find_element(*self.locator.LOGIN_MODAL) else False
-
-    def open_login_modal(self):
-        login_modals = [self.locator.LOGIN_MODAL_1, self.locator.LOGIN_MODAL_2, self.locator.LOGIN_MODAL_3, self.locator.SIGN_IN_BTN, self.locator.MOBILE_SIGN_IN_BTN]
-
-        for modal in login_modals:
-            elem = self.find_element(*modal)
-            if elem:
-                elem.click()
-                return 
-        
-    def open_login_mobile_modal(self):
-        self.find_element(*self.locator.LOGIN_MODAL_MOBILE).click()
 
     def enter_email(self):
         self.find_element(*self.locator.LOGIN_EMAIL_INPUT).send_keys(EMAIL)    
@@ -57,7 +45,6 @@ class GeoDataPage(BasePage):
 
 
     def login(self):
-        self.open_login_modal()
         self.enter_email()
         self.enter_password()
         self.click_login_btn()

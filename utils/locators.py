@@ -30,15 +30,9 @@ class GoogleMapLocators(object):
     SEARCH_BTN = (By.ID, 'searchbox-searchbutton')
 
 class GeoDataLocators(object):
-    LOGIN_MODAL_1 = (By.XPATH, '/html/body/div[1]/div[2]/header[2]/div/div[2]/div/nav/div/div[3]/div[2]/ul/li[10]/div/a')
-    LOGIN_MODAL_2 = (By.XPATH, '/html/body/div[1]/div[2]/header[1]/div/div/div/nav/div/div[2]/div[1]/ul/li/ul/li[1]/div/div/a')
-    LOGIN_MODAL_3 = (By.XPATH, '/html/body/div[1]/div[2]/header[2]/div/div[2]/div/nav/div/div[3]/div[1]/ul[2]/li/ul/li[1]/div/div/a')
-    SIGN_IN_BTN = (By.XPATH, '//*[@id="loginRegisterErrorMobile"]')
-    MOBILE_SIGN_IN_BTN = (By.ID, 'loginRegisterErrorMobile')
-    LOGIN_EMAIL_INPUT = (By.ID, 'LoginModal_Email')
-    LOGIN_EMAIL_INPUT = (By.ID, 'LoginModal_Email')
-    LOGIN_PASSWORD_INPUT = (By.ID, 'LoginModal_Password')
-    LOGIN_SUBMIT_BTN = (By.ID, 'LoginModal_Submit')
+    LOGIN_EMAIL_INPUT = (By.ID, 'UserEmail')
+    LOGIN_PASSWORD_INPUT = (By.ID, 'UserPassword')
+    LOGIN_SUBMIT_BTN = (By.ID, '_MainSubmitBtn1')
     OVERRIDE_LOGIN_BTN = (By.ID, 'btnLogin')
     ALL_COUNTIES_BTN = (By.ID, 'lnkallcounties')
     HOUSE_NUMBER_INPUT = (By.ID, 'txt_HNo')
