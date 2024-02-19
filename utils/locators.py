@@ -32,7 +32,7 @@ class GoogleMapLocators(object):
 class GeoDataLocators(object):
     LOGIN_EMAIL_INPUT = (By.ID, 'UserEmail')
     LOGIN_PASSWORD_INPUT = (By.ID, 'UserPassword')
-    LOGIN_SUBMIT_BTN = (By.ID, '_MainSubmitBtn1')
+    LOGIN_SUBMIT_BTN = (By.CLASS_NAME, 'themePrimaryBtn')
     OVERRIDE_LOGIN_BTN = (By.ID, 'btnLogin')
     ALL_COUNTIES_BTN = (By.ID, 'lnkallcounties')
     HOUSE_NUMBER_INPUT = (By.ID, 'txt_HNo')

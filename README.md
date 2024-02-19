@@ -14,11 +14,11 @@ Address hub is a web automation tool which inserts property addresses into 5 dif
 2. Make sure you have python3 and pip installed on your machine
 3. Navigate into the folder and run these 3 commands
 ```sh
-pip install selenium
-pip install packaging
-pip install python-dotenv
-pip install webdriver-manager
-pip install gspread oauth2client
+pip3.12 install selenium
+pip3.12 install packaging
+pip3.12 install python-dotenv
+pip3.12 install webdriver-manager
+pip3.12 install gspread oauth2client
 ```
 4. Save a .env file to the project with the property address you want to automate. If the property is not an apartment, leave `UNIT` blank example:
 ```sh
@@ -37,12 +37,12 @@ PASSWORD=INSERT_PASSWORD_FOR_GEODATADIRECT
 
 #### If you want to run all tests, you should type: 
 ```sh
-python3 -m unittest tests.test_all_pages 
+python3.12 -m unittest tests.test_all_pages 
 ```
 
 #### If you want to run one specific website, you should type: 
 ```sh
-python3 -m unittest tests.test_nyc_gov_page
+python3.12 -m unittest tests.test_nyc_gov_page
 ```
 
 #### To update your code, enter this command in terminal:
