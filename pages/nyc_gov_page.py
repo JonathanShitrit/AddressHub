@@ -7,7 +7,8 @@ import time
 class NYCGovPage(BasePage):
     def __init__(self, driver):
         self.locator = NYCGovLocators
-        super(NYCGovPage, self).__init__(driver, "http://a810-bisweb.nyc.gov/bisweb/bispi00.jsp?show=1")  # Python2 version
+        url = "https://a810-bisweb.nyc.gov/bisweb/PropertyProfileOverviewServlet?boro={}&houseno={}&street={}&go2=+GO+&requestid=0".format(get_boro_id(), STREET_NUMBER, STREET_NAME)
+        super().__init__(driver, url)
         self.new_tab()
 
     def check_page_loaded(self):
@@ -35,3 +36,6 @@ class NYCGovPage(BasePage):
         self.insert_property_address()
         print("Clicking go button...")
         self.click_go_btn()
+
+    def run_empty_test(self):
+        pass

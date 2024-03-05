@@ -6,7 +6,7 @@ import time
 class AcrisPage(BasePage):
     def __init__(self, driver):
         self.locator = AcrisLocators
-        super(AcrisPage, self).__init__(driver, "https://a836-acris.nyc.gov/CP/LookUp/Index")  # Python2 version
+        super().__init__(driver, "https://a836-acris.nyc.gov/CP/LookUp/Index")
         self.new_tab()
 
     def check_page_loaded(self):

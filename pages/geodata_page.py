@@ -7,7 +7,7 @@ import time
 class GeoDataPage(BasePage):
     def __init__(self, driver):
         self.locator = GeoDataLocators
-        super(GeoDataPage, self).__init__(driver, "https://www.attomdata.com/solutions/property-navigator/signin")  # Python2 version
+        super().__init__(driver, "https://www.attomdata.com/solutions/property-navigator/signin") 
         self.new_tab()
 
     def check_page_loaded(self):

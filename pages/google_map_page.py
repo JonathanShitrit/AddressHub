@@ -7,7 +7,8 @@ import time
 class GoogleMapPage(BasePage):
     def __init__(self, driver):
         self.locator = GoogleMapLocators
-        super(GoogleMapPage, self).__init__(driver, "https://www.google.com/maps/")  # Python2 version
+        url = "https://www.google.com/maps/place/{} {}, {}, {}".format(STREET_NUMBER, STREET_NAME, CITY, STATE)
+        super().__init__(driver, url)
         self.new_tab()
 
     def check_page_loaded(self):
@@ -40,3 +41,6 @@ class GoogleMapPage(BasePage):
         print("Clicking go button...")
         self.click_search_btn()
         time.sleep(2)
+
+    def run_empty_test(self):
+        pass

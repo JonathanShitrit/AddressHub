@@ -6,7 +6,8 @@ import time
 class TruePeopleSearchPage(BasePage):
     def __init__(self, driver):
         self.locator = TruePeopleLocators
-        super(TruePeopleSearchPage, self).__init__(driver, "https://www.truepeoplesearch.com/#")  # Python2 version
+        url = "https://www.truepeoplesearch.com/resultaddress?streetaddress={} {} &citystatezip={}, {}".format(STREET_NUMBER, STREET_NAME, CITY, STATE)
+        super().__init__(driver, url)
         self.new_tab()
 
     def check_page_loaded(self):
@@ -43,3 +44,6 @@ class TruePeopleSearchPage(BasePage):
         self.insert_property_address()
         print("Clicking search...")
         self.click_search_btn()
+
+    def run_empty_test(self):
+        pass

@@ -19,23 +19,15 @@ class TestAllPages(BaseTest):
         try:
             print("Opening TruePeople.")
             true_people = TruePeopleSearchPage(self.driver)
-            true_people.run_full_test()
+            true_people.run_empty_test()
             print("Finished with True People.\n")
         except Exception as e:
             print("\nSomething failed with TruePeople.", e,"\n")
-        
-        try:
-            print("Opening NYC Gov.")
-            nyc_gov_page = NYCGovPage(self.driver)
-            nyc_gov_page.run_full_test()
-            print("Finished with NYC Gov.\n")
-        except Exception as e:
-            print("\nSomething failed with NYC Gov.", e,"\n")
 
         try:        
             print("Opening Google Maps.")
             google_map_page = GoogleMapPage(self.driver)
-            google_map_page.run_full_test()
+            google_map_page.run_empty_test()
             print("Finished with Google Maps.\n")
         except Exception as e:
             print("\nSomething failed with Google Maps.", e,"\n")
@@ -48,3 +40,10 @@ class TestAllPages(BaseTest):
         except Exception as e:
             print("\nSomething failed with GeoData.", e,"\n")
 
+        try:
+            print("Opening NYC Gov.")
+            nyc_gov_page = NYCGovPage(self.driver)
+            nyc_gov_page.run_empty_test()
+            print("Finished with NYC Gov.\n")
+        except Exception as e:
+            print("\nSomething failed with NYC Gov.", e,"\n")
