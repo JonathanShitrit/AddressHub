@@ -19,6 +19,7 @@ class BaseTest(unittest.TestCase):
         options.add_argument("--disable-extensions")
         options.add_argument("--window-size=1080,1080")
         options.add_experimental_option("detach", True)
+        options.page_load_strategy = 'eager'
         # options.add_argument("--enable-automation")
         # options.add_argument("--start-fullscreen")
         # options.add_experimental_option("excludeSwitches", ['enable-automation'])
