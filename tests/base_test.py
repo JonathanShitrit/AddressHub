@@ -1,7 +1,7 @@
 import unittest
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
 from utils.google_sheet import GoogleSheet
 from utils.env_loader import *
@@ -30,7 +30,11 @@ class BaseTest(unittest.TestCase):
         print("Starting up!")
 
         global d
-        d = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+        chrome_path = ChromeDriverManager().install()
+        if "THIRD_PARTY_NOTICES.chromedriver" in chrome_path:
+            chrome_path = chrome_path.replace("THIRD_PARTY_NOTICES.chromedriver", "chromedriver")
+
+        d = webdriver.Chrome(options=options)
         # d = webdriver.Chrome(options=options)
         self.driver = d
         
